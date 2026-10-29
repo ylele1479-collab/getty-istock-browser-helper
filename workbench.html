@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Getty / iStock 图片助手</title><link rel="icon" href="assets/icon32.png"><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="brand"><div class="logos"><img src="assets/getty.png" alt="Getty Images"><img src="assets/istock.png" alt="iStock"></div><div><h1>Getty / iStock 图片助手</h1><p>水印检查与真实像素提升同时通过，才允许保存</p></div></div><span class="tag">v2.4 · 无需启动 EXE</span></header>
+<main><section class="panel"><div class="section-head"><h2>粘贴或拖入图片链接</h2><button id="readPages" class="secondary">读取已打开的网页</button></div>
+<textarea id="urls" rows="4" placeholder="粘贴 Getty / iStock 图片直链或单张素材页链接；支持换行、空格、逗号、直接相连，最多20条。" aria-label="图片链接"></textarea>
+<p id="inputStatus" class="input-status" role="status">已识别 0 张图片</p><div id="inputMaterials" aria-label="待解析图片"></div>
+<div class="actions"><button id="paste" class="secondary">粘贴</button><button id="parse" class="primary">解析并预览</button><button id="stop" class="secondary" hidden>停止</button><button id="clear" class="secondary">清空</button></div>
+<p class="hint">先查找同一照片的较大图源，再按旧版算法核验和局部修补。解析不会自动打开素材页，也不会自动保存。</p>
+<div id="verificationActions" class="actions" hidden><button id="focusSource" class="secondary">手动打开素材页</button><button id="resume" class="primary">我已处理，继续</button><button id="skip" class="secondary">跳过这张</button></div>
+<details><summary>下载位置与设置</summary><div class="settings"><label><input type="checkbox" id="fixedDownload"> 固定下载目录</label><span id="directoryName">使用浏览器下载目录</span></div>
+<div class="actions"><button id="pickDirectory" class="secondary small">选择并记住目录</button><button id="listDirectory" class="secondary small">查看所选目录</button><button id="downloadFolder" class="secondary small">打开浏览器下载文件夹</button></div>
+<p id="directoryStatus" class="hint" role="status">不固定目录时保存到浏览器下载目录中的 Getty-iStock 文件夹。</p><label class="setting-line"><input type="checkbox" id="saveAs"> 使用浏览器下载时，每次询问保存位置</label></details>
+<details id="moreSettings"><summary>图片处理与更多设置</summary>
+<label class="setting-line"><input id="allowRepair" type="checkbox" checked> 找到同素材较小版本时，尝试改善水印条带</label>
+<label class="setting-line"><input id="autoEnlarge" type="checkbox" checked> 在已打开的素材页尝试一次正常放大，读取更大图源</label>
+<p class="hint">复用 84 / 85 的局部融合、OCR 参考图检查和输出检查。修补区域来自小图，可能偏软。未取得更大真实图源、仍检测到水印或检查未完成时，仅供预览，禁止保存。</p>
+<label class="setting-line">图源偏好 <select id="mode"><option value="largest">优先较高分辨率</option><option value="clean">优先来源标记无水印的版本</option></select></label>
+<label class="setting-line" for="sourceUrls">补充同素材高清图片链接（可选，单张解析时使用）</label><textarea id="sourceUrls" rows="2" placeholder="通常留空；可复制正常素材页放大后显示的同素材官方图片地址。" aria-label="补充同素材图片链接"></textarea>
+<details><summary>试用样本</summary><div class="actions"><button id="sampleBoy" class="secondary small">白衬衫男孩</button><button id="sampleMan" class="secondary small">深色上衣男士</button></div></details>
+<details><summary>使用 Fetchpik 返回的图片</summary><p class="hint">可手动打开 <a href="https://fetchpik.com/gettyimages-downloader.php" target="_blank" rel="noopener noreferrer">Fetchpik</a>。将其最终返回的 short.askingtips.com/uploads/ 图片地址粘贴到上方，作为独立图片预览。</p></details></details>
+<p id="engineStatus" class="hint" role="status">图像处理在浏览器内运行，首次使用会加载随插件提供的本地引擎。</p><p id="notice" class="notice" role="status">添加链接后会立即显示图片数量，无需先点击解析。</p></section>
+<div class="results-head"><p id="summary" role="status"></p><button id="downloadAll" class="secondary" hidden disabled>保存合格图片</button></div><section id="results" aria-live="polite"></section>
+<footer>只使用实际取得的图源，不用插值或 AI 重绘冒充高清。网站人机验证需要在正常素材页由你完成。</footer></main>
+<nav class="page-navigation" aria-label="页面位置">
+<button id="backToTop" type="button" aria-label="回到顶部" title="回到顶部">↑ <span>回到顶部</span></button>
+<button id="backToBottom" type="button" aria-label="回到底部" title="回到底部">↓ <span>回到底部</span></button>
+</nav>
+<dialog id="viewer"><div class="viewer-head"><strong id="viewerTitle"></strong><div class="actions"><select id="viewerMode" aria-label="图片版本"><option value="comparison">解析前</option><option value="output">解析后</option></select><button id="viewerZoom" class="secondary small">放大查看</button><button id="viewerDownload" class="primary small">保存解析后</button><button id="closeViewer" class="secondary small">关闭</button></div></div>
+<div class="viewer-stage"><div id="viewerScroll" class="viewer-scroll" tabindex="0"><img id="viewerImage" alt="原尺寸大图预览" draggable="false"></div>
+<button id="viewerPrev" class="viewer-side viewer-side-prev" type="button" aria-label="上一张对照图" title="切换解析前 / 解析后"><span aria-hidden="true">‹</span></button>
+<button id="viewerNext" class="viewer-side viewer-side-next" type="button" aria-label="下一张对照图" title="切换解析前 / 解析后"><span aria-hidden="true">›</span></button></div>
+<p class="hint">点击图片两侧箭头，或按 ← / →、A / D 切换解析前 / 解析后；双击放大，再双击还原；也可点“还原大小”，放大后可拖动查看。</p></dialog>
+<dialog id="directoryDialog"><div class="viewer-head"><strong id="directoryTitle">所选目录</strong><button id="closeDirectory" class="secondary small">关闭</button></div><p class="hint">浏览器内查看目录内容；纯插件无法任意唤起 Windows 文件夹窗口。</p><div id="directoryFiles"></div></dialog>
+<div id="inputHoverPreview" class="input-hover-preview" role="tooltip" hidden><p class="hover-preview-label"></p><img alt="对应素材的原图试看" hidden><p class="hover-preview-status" role="status"></p></div>
+<script src="core.js"></script><script src="saver.js"></script><script src="engine.js"></script><script src="hover-preview.js"></script><script src="ui.js"></script></body></html>
+

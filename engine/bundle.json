@@ -1,0 +1,161 @@
+{
+  "pyodide": "0.28.3",
+  "onnxruntime_web": "1.23.2",
+  "packages": [
+    "numpy",
+    "pillow",
+    "opencv-python",
+    "pyclipper",
+    "shapely",
+    "pyyaml",
+    "requests",
+    "tqdm",
+    "packaging",
+    "ssl"
+  ],
+  "original_sha256": {
+    "app/__init__.py": "35aba15141f4e994ad342b0e945aee54e497402ce1d72efaf4f2634c7c07abb2",
+    "app/pipeline.py": "a634ac807b565d3dbd7bc71565e2b9b21f796c9d1cbb978ee40718e354a50b1e",
+    "app/repair.py": "ebf6270e67af0aaa40fa8cdd654ff7f3111d01f9984bf7bd927aa5c69867b631",
+    "app/wide_overlay.py": "bd0ad2a91a571d365da634f0fe5f35682418dc9511761f3728c93313b87c67c8",
+    "app/output_guard.py": "19720947e7fe36b784bb64aef43dd74b78157235e7a17b670b052084d8c20ff3",
+    "app/ocr_guard.py": "b4abf8049a32dc393de7afeb3b083158eb7fc53695044ffa8f3817a33c04887f",
+    "app/source_identity.py": "27a382bc73c1b940783e03db64522f324bb1ca4d5ac5e09aec32e67327b92c1b",
+    "app/verify.py": "0252e4cdbe862d0ef248fa36a3b9ca238131cd2aa4950af79e95752a1e5bbf53",
+    "app/errors.py": "16b78699d3b6ac904a4ef24463e506fcf724949e3de6435c46a0db2f4ed9028b",
+    "app/urlparse_gt.py": "ec3e9d883b22be1c79ccc7178f8a2106790e7f6937542f9dd3665f9b288834e1",
+    "app/browser_sources.py": "690a798e40aed525955c87848425998a1bf0b32461193b71f31ee6626a147150",
+    "app/netguard.py": "577d94a8d4dfbfe4e2889ab968de438396d426b8cea3532233f71d251f5f0892",
+    "app/source_fetch.py": "3bc127d0a47984a4de22d4c754c1e42b61873519e8154102483a682f0292145f"
+  },
+  "files": {
+    "vendor/ort/LICENSE": {
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    "vendor/ort/ort-wasm-simd-threaded.mjs": {
+      "bytes": 20321,
+      "sha256": "90a557d15c02bac4504d95b67f431d8594635ed2a0a62a7f2cd83d090ff91d3e"
+    },
+    "vendor/ort/ort-wasm-simd-threaded.wasm": {
+      "bytes": 11905541,
+      "sha256": "45eaee27761ad883742a8d4b8fce1538d60ce43b51adf1726fafccc59b8c1a15"
+    },
+    "vendor/ort/ort.wasm.min.mjs": {
+      "bytes": 49856,
+      "sha256": "69751720f611e37d1ce2fa3c6ebaa80f949014752636c5f8887a63d40feadcc7"
+    },
+    "vendor/ort/ThirdPartyNotices.txt": {
+      "bytes": 326866,
+      "sha256": "e9e90971a8e75a9a8ac0c6412e29c1202d079998389915aa485f46c816c3b4cc"
+    },
+    "vendor/pyodide/certifi-2025.7.14-py3-none-any.whl": {
+      "bytes": 162722,
+      "sha256": "50bf375b50d4673993570099f044348ee5a0ff66ed9e9489f4bdf5182f2f0b7f"
+    },
+    "vendor/pyodide/charset_normalizer-3.4.2-py3-none-any.whl": {
+      "bytes": 52626,
+      "sha256": "747b3fcff9eefacc2d19c75e7b8926ccebdcb78271a7b821af87eb367c43ccfe"
+    },
+    "vendor/pyodide/idna-3.10-py3-none-any.whl": {
+      "bytes": 70442,
+      "sha256": "03afc91d39e676e8684c421beb900c09269148d67b137c3fb45b7f319e8cd8b4"
+    },
+    "vendor/pyodide/libopenssl-1.1.1w.zip": {
+      "bytes": 796824,
+      "sha256": "48965994b6ace00d3ebbc2dc1b65c11978582620f4ef6c71a50d9ea4c5fc7437"
+    },
+    "vendor/pyodide/numpy-2.2.5-cp313-cp313-pyodide_2025_0_wasm32.whl": {
+      "bytes": 3109648,
+      "sha256": "3db3c4f3e0448f4d62a85c262692f1260ccd8a91335442bd2442f21ffeddb558"
+    },
+    "vendor/pyodide/opencv_python-4.11.0.86-cp313-cp313-pyodide_2025_0_wasm32.whl": {
+      "bytes": 11700243,
+      "sha256": "a92d8984ec1468e99894a24f714ed90980dd263acb8c232aa18cf9378a3fdeb8"
+    },
+    "vendor/pyodide/packaging-24.2-py3-none-any.whl": {
+      "bytes": 71930,
+      "sha256": "fdbc12e70e25c89b3e95a853f09065c629ebd6add9bf7a788ce6cfdb35b5c7b0"
+    },
+    "vendor/pyodide/pillow-11.3.0-cp313-cp313-pyodide_2025_0_wasm32.whl": {
+      "bytes": 1058399,
+      "sha256": "52984112ca668d60291a7868011a04d66baf526d27e5eaef0a8a16e7ef22ab6c"
+    },
+    "vendor/pyodide/pyclipper-1.3.0.post6-cp313-cp313-pyodide_2025_0_wasm32.whl": {
+      "bytes": 77950,
+      "sha256": "35d785fda94fe5fcb0ddd0a1a0cb7c47c846104e8d1f10b673faad9f9b48bd17"
+    },
+    "vendor/pyodide/pyodide-lock.json": {
+      "bytes": 109732,
+      "sha256": "f6e6f42f451f42affbbcddb00e8c9a3278dcbf399f57aab9f3f568839a7ff4a6"
+    },
+    "vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1073033,
+      "sha256": "b22e5831eade9ff10e6fe2c811c68688cd91f10154377b4f80debcf5bafa1e56"
+    },
+    "vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8645967,
+      "sha256": "5effb6a1a6cc4a1a85bec4622701aa797c031e1de923cbbaf2ad47abdc4ab325"
+    },
+    "vendor/pyodide/pyodide.js": {
+      "bytes": 17331,
+      "sha256": "24a458425dcb4ea9836eb5ce26701d18cb769374e2b79247602ba605bf093278"
+    },
+    "vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2416866,
+      "sha256": "71fee17f88a6260ec8c9c7c063533ee59c021fdc88a1ce76247378d3c4a35f4c"
+    },
+    "vendor/pyodide/pyyaml-6.0.2-cp313-cp313-pyodide_2025_0_wasm32.whl": {
+      "bytes": 119584,
+      "sha256": "02c517acb78aa37b1ae95c964442f5f77ddf217ab8f76c1422fca52ffe4cb784"
+    },
+    "vendor/pyodide/requests-2.32.4-py3-none-any.whl": {
+      "bytes": 65069,
+      "sha256": "2a5c13c71315e4f4453723cbef19e6a11017519b57f381f6888636fc1f7bef1e"
+    },
+    "vendor/pyodide/shapely-2.0.7-cp313-cp313-pyodide_2025_0_wasm32.whl": {
+      "bytes": 836356,
+      "sha256": "aad97628f25075275538eb04c98dfd4bf539b5e499b8b73b31238ed4dd7b8904"
+    },
+    "vendor/pyodide/ssl-1.0.0-cp313-cp313-pyodide_2025_0_wasm32.whl": {
+      "bytes": 65169,
+      "sha256": "68e1ac39f5e5a83d0eda2baec3771d5322a04c0bc5d6395db2cd6ff0ef57b00a"
+    },
+    "vendor/pyodide/tqdm-4.67.1-py3-none-any.whl": {
+      "bytes": 78540,
+      "sha256": "93748be542ca5a4f4708cfdaf6bd1526e04fbbbef3b3972de79a58c1ab89294a"
+    },
+    "vendor/pyodide/urllib3-2.5.0-py3-none-any.whl": {
+      "bytes": 129795,
+      "sha256": "6b830b2ec3add37f3922547568ec78aab8a9665a1a652f1dcf667020f8a1d6e3"
+    },
+    "engine/brand-edge-templates.npz": {
+      "bytes": 14512,
+      "sha256": "2e7b263f894a9908bf995d15c3703bc31963ec48674efef1c9f003e94882e4d8"
+    },
+    "engine/browser_adapter.py": {
+      "bytes": 8392,
+      "sha256": "9c77300851e8ad6ff09b232614f35734a231292faee792b926a85e6fed7f9f31"
+    },
+    "engine/models.json": {
+      "bytes": 94316,
+      "sha256": "da5da653a11508faeefaa3424c0d037b4980809cbf535e4ce66bafe58b05dc93"
+    },
+    "engine/onnxruntime.py": {
+      "bytes": 1620,
+      "sha256": "7af7103dbfd56d6b12d48d0e23db7d1ff1bc99aabb9874a62983989fb07fd0a4"
+    },
+    "engine/original.zip": {
+      "bytes": 646980,
+      "sha256": "ef5b825d2e59bbc4f9701adfb8e015cd7f06c471dac39169cdcee298e72269a8"
+    },
+    "engine/models/PP-OCRv6_det_small.onnx": {
+      "bytes": 9929594,
+      "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f"
+    },
+    "engine/models/PP-OCRv6_rec_small.onnx": {
+      "bytes": 21234383,
+      "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884"
+    }
+  }
+}

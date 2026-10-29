@@ -1,0 +1,18 @@
+Getty / iStock 图片助手使用的第三方组件
+
+本包内含 Pyodide、Python、NumPy、Pillow、OpenCV、ONNX Runtime Web、RapidOCR，
+以及 RapidOCR 的配置、轮廓处理等依赖。模型在浏览器内运行。
+
+对应许可证和版权声明保留在 vendor 目录、各 Python wheel 的 dist-info 目录，
+以及 engine/original.zip 的原 Python 包和 dist-info 中。
+原版处理模块保持来源与算法记录；具体文件校验信息见 engine/bundle.json。
+
+上游项目：
+https://github.com/pyodide/pyodide
+https://github.com/microsoft/onnxruntime
+https://github.com/RapidAI/RapidOCR
+https://github.com/opencv/opencv
+https://numpy.org/
+https://python-pillow.github.io/
+
+Getty Images / iStock 标识为用户提供的界面素材，本工具不代表上述网站。
