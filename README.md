@@ -2,6 +2,16 @@
 
 Chrome / Microsoft Edge 扩展，读取正常打开的 Getty Images / iStock 网页中的公开图源，查询同素材的较大图片，在工作台进行处理、前后对比与手动保存。发布版本 **2.4.0**。
 
+## 导入素材后的效果
+
+以下是公开网页样例的**历史验证截图**，展示已有工具中的解析前后预览，不是本次重新运行网站后的新结果。效果取决于网页提供的图源和处理检查，不能保证所有图片均有相同提升。
+
+![公开素材的处理前后对照](docs/images/before-after-example.png)
+
+此样例界面显示解析前 `434 × 612`、解析后 `1454 × 2048`，并保留检查状态、放大及手动保存按钮。图片来自 Getty 公开素材编号 `77659035`，仅用于介绍软件界面，素材权利归原权利人。
+
+![工作台输入与设置界面](docs/images/workbench.png)
+
 ## 下载完整包
 
 **[下载完整可运行版](https://github.com/ylele1479-collab/getty-istock-browser-helper/releases/latest)**，选择 `Getty-iStock-plugin-v2.4.0.zip`。
